@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    color: hsl(212, 23%, 69%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+h2 {
+    color: hsl(217, 19%, 35%);
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 700px;
+    max-height: 250px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 15%;
+}
+
+#introduction {
+    margin-bottom: 0px;
+    position: relative;
+    word-spacing: 1px;
+
+}
+
+#image {
+    background-image: url("./images/drawers.jpg");
+    background-size: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+#text {
+    border-radius: 0px 10px 10px 0px;
+    background-color: white;
+    padding: 0px 50px;
+}
+
+#details {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+
+}
+
+#avatar {
+    width: 10%;
+    border-radius: 50%;
+    margin: 20px 20px 20px 0px;
+}
+
+#Michelle {
+    margin-bottom: 0px;
+
+
+}
+
+#name {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+#date {
+    margin-top: 0px;
+}
+
+#text-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#image-and-name {
+    display: flex;
+    justify-content: start;
+    margin-top: 0px;
+}
+
+#share-icon {
+    padding: 5px;
+    height: fit-content;
+    margin-top: 2px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+    cursor: pointer;
+
+}
+
+#share-box {
+    width: 220px;
+    height: 50px;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    left: 220px;
+    bottom: 70px;
+}
+
+#share-box::before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    content: "";
+    position: absolute;
+    right: 105px;
+    top: 50px;
+}
+
+#share {
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 0.3em;
+    margin-right: 5px;
+}
+
+.social-media-icons {
+    margin: 5px;
+}
+
+#share-box.hidden {
+    display: none;
+}
+
+
+@media screen and (max-width: 375px) {
+
+    #container {
+        grid-template-columns: 100%;
+        grid-template-rows: minmax(200px, 1fr);
+        margin: 30px;
+    }
+
+    #image {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    #text {
+        border-radius: 0px 0px 10px 10px;
+        padding: 10px 30px;
+
+    }
+
+    #introduction {
+        margin-bottom: 10px;
+    }
+
+    #share-box {
+        width: 126%;
+        height: 60px;
+        background-color: hsl(217, 19%, 35%);
+        border-radius: 0px 0px 10px 10px;
+        margin: 0px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        left: -30px;
+        bottom: -8px;
+        right: 50px;
+        padding: 30px;
+    }
+
+    #share-box::before {
+        border-style: none;
+    }
+
+    #share-icon {
+        width: 35px;
+        z-index: 5;
+        justify-self: center;
+        align-self: center;
+        margin-top: 40px;
+        margin-right: 0px;
+    }
+
+    #image-and-name {
+        margin-top: 25px;
+    }
+
+}
